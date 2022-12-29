@@ -1,5 +1,7 @@
 html,body
 {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -16,7 +18,7 @@ main
 .left
 {
     width: 564px;
-    height: 900px;    
+    height: 750px;    
     float: left;
     background: url(assets/alura-logo.png) no-repeat -80px -100px;
     opacity: 0;
@@ -26,7 +28,7 @@ main
 .left textarea
 {
     width: 100%;
-    height: 60%;
+    height: 70%;
     padding-top: 20%;
     background: none;
     border: 0;
@@ -45,7 +47,8 @@ main
 .left div p img{width: 15px;}
 
 #encriptarBTN,
-#descodificarBTN
+#descodificarBTN,
+#copyBTN
 {
     width: 250px;
     height: 50px;
@@ -59,17 +62,22 @@ main
     box-shadow: -3px 3px 6px 2px rgba(0, 0, 0, 0.2);
     
 }
+
+#copyBTN{margin:0 auto;display: block;}
+
 #descodificarBTN{background: #D8DFE8;color: #333;}
 
 #encriptarBTN:hover,
-#descodificarBTN:hover
+#descodificarBTN:hover,
+#copyBTN:hover
 {
     background: #e67e22;
     cursor: pointer;
     color: #FFF;
 }
 #encriptarBTN:active,
-#descodificarBTN:active
+#descodificarBTN:active,
+#copyBTN:active
 {
     background: #333;
 }
@@ -93,11 +101,69 @@ main
 {text-align: center;}
 
 
+.copyright
+{
+    width: 100%;
+    text-align: center;
+    float: left;
+    opacity: 0;
+    animation: opacidadAnimated 2s 5s linear forwards;
+}
+
+
+/*======================================
+        =====WEB RESPONSIVE=====
+======================================*/
+
+@media (max-width:1024px)
+{
+    main{width: 700px;}
+    .left{width: 80%; height: auto; margin: 0 auto;float: none; }
+
+    .left textarea
+    {
+        width: 100%;
+        height: 300px;
+    }
+
+    .right {width: 100%; height: 200px; padding: 0; margin: 25px 0;}
+    .right img{display: none;}
+    .right h2{font-size: 20px;}
+}
+
+@media (max-width:768px)
+{
+    main{width: 468px;}
+    .left{width: 80%; height: auto; margin: 0 auto;float: none; }
+
+    .left textarea
+    {
+        width: 100%;
+        height: 300px;
+    }
+    .right {width: 100%; height: 200px; padding: 0; margin: 25px 0;}
+    #encriptarBTN,
+    #descodificarBTN
+    {width: 100%; margin: 5px 0;}
+}
+
+@media (max-width:500px)
+{
+    main{width: 90%;}
+    .left{width: 90%;float: none; height: auto; margin: 0 auto;}
+
+    .left textarea
+    {
+        width: 100%;
+        height: 250px;
+    }
+    #encriptarBTN,
+    #descodificarBTN
+    {width: 100%; margin: 5px 0;}
 
 
 
-
-
+}
 
 /*======================================
         =====ANIMACIONES=====
@@ -106,19 +172,5 @@ main
 {
     0% {opacity: 0;}
     100% {opacity: 1;}    
-}
-
-
-@keyframes backgroundAnimated 
-{
-    0%
-    {background:#f3f5fc url(assets/alura-logo.png) repeat 0px -10000px; opacity: 1;}
-    90%
-    {background:#f3f5fc url(assets/alura-logo.png) repeat 0px 0px;opacity: 0;}
-    91%
-    {background:none; opacity: 1;}
-    100%
-    {background:#f3f5fc;}
-        
 }
 
