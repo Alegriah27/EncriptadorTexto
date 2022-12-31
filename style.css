@@ -21,8 +21,6 @@ main
     height: 750px;    
     float: left;
     background: url(assets/alura-logo.png) no-repeat -80px -100px;
-    opacity: 0;
-    animation: opacidadAnimated 2s 1s linear forwards;
 }
 
 .left textarea
@@ -36,13 +34,11 @@ main
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #0A3871;
     resize: none;
-    opacity: 0;
-    animation: opacidadAnimated 2s 2s linear forwards;
 }
 
 .left textarea:focus{outline: 0;}
 .left textarea::placeholder{color: #0A3871;font-size: 30px;}
-.left div{width: 100%;opacity: 0;animation: opacidadAnimated 2s 3s linear forwards;}
+.left div{width: 100%;}
 .left div p{font-size: small;}
 .left div p img{width: 15px;}
 
@@ -92,13 +88,11 @@ main
     float: left;
     border-radius: 30px;    
     box-shadow: -5px 5px 10px 4px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    animation: opacidadAnimated 2s 4s linear forwards;
 }
 
 .right h2,
 .right p
-{text-align: center;}
+{text-align: center; padding: 0 5px;}
 
 
 .copyright
@@ -106,8 +100,7 @@ main
     width: 100%;
     text-align: center;
     float: left;
-    opacity: 0;
-    animation: opacidadAnimated 2s 5s linear forwards;
+    margin: 0 0 20px 0;
 }
 
 
@@ -161,13 +154,45 @@ main
     #descodificarBTN
     {width: 100%; margin: 5px 0;}
 
-
-
 }
 
+
+
 /*======================================
-        =====ANIMACIONES=====
+     =====ANIMACIONES ACTIVACION=====
 ======================================*/
+
+.left
+{
+    opacity: 0;
+    animation: opacidadAnimated 2s 0s linear forwards;
+}
+
+.left textarea
+{
+    opacity: 0;
+    animation: opacidadAnimated 2s 1s linear forwards;
+}
+
+.left div{opacity: 0; animation: opacidadAnimated 2s 2s linear forwards;}
+
+.right
+{
+    opacity: 0;
+    animation: opacidadAnimated 2s 3s linear forwards;
+}
+
+.copyright
+{
+    opacity: 0;
+    animation: opacidadAnimated 2s 4s linear forwards;
+}
+
+
+/*======================================
+     =====ANIMACIONES FUNCIONES=====
+======================================*/
+
 @keyframes opacidadAnimated 
 {
     0% {opacity: 0;}
