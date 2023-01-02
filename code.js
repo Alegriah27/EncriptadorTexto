@@ -50,19 +50,23 @@ function encriptarTEXTO()
         }
         
     }
-    document.getElementById('resultado').innerHTML = "<h2 style=\"color:#e00\">"+ textoEncriptado +"</h2><button id=\"copyBTN\">Copiar texto</button>";
+    document.getElementById('resultado').innerHTML = "<textarea id=\"textoEncriptado00\" value=\" "+textoEncriptado+"\">"+textoEncriptado+"</textarea> <button id=\"copyBTN\">Copiar texto</button>";
     
-    var copyBTN = document.querySelector('#copyBTN');
+        var copyBTN = document.querySelector('#copyBTN');
 
-        copyBTN.addEventListener('click',
-        function clipboard()
+       
+        function clipboardTEXTO()
         {
-            textoEncriptado.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(textoEncriptado);
+            
+            //navigator.clipboard.writeText(textoEncriptado);
+            var contenido = document.querySelector('#textoEncriptado00');
+            contenido.select();
+            document.execCommand("copy");
             alert("Su texto " + textoEncriptado +" ha sido copiado: ");
+
         }
-    
-    );
+
+        copyBTN.onclick = clipboardTEXTO;
 }
 
 
@@ -119,6 +123,7 @@ function desencriptarTEXTO()
 =================================*/
 encriptarBTN.onclick = encriptarTEXTO;
 descodificarBTN.onclick = desencriptarTEXTO;
+
 
 
 
