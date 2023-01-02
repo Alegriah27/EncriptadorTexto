@@ -57,6 +57,7 @@ function encriptarTEXTO()
         copyBTN.addEventListener('click',
         function clipboard()
         {
+            textoEncriptado.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(textoEncriptado);
             alert("Su texto " + textoEncriptado +" ha sido copiado: ");
         }
