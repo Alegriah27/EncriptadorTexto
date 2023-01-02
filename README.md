@@ -18,3 +18,5 @@ Para este proyecto el diseño se hizo para que se adapte para que se pueda visua
 - CSS
 - JAVASCRIPT
 
+##### Desktop View
+[![desktop](desktop "desktop")](https://github.com/Alegriah27/EncriptadorTexto/blob/main/assets/img/desktop.png?raw=true "desktop")
