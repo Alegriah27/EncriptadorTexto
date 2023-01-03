@@ -19,4 +19,10 @@ Para este proyecto el diseño se hizo para que se adapte para que se pueda visua
 - JAVASCRIPT
 
 ##### Desktop View
-<img src="https://github.com/Alegriah27/EncriptadorTexto/blob/main/assets/img/desktop.png">
+<img src="https://github.com/Alegriah27/EncriptadorTexto/blob/main/assets/img/desktop.png" height="300">
+
+##### Tablet View
+<img src="https://github.com/Alegriah27/EncriptadorTexto/blob/main/assets/img/tablet.png" height="300">
+
+##### Mobile View
+<img src="https://github.com/Alegriah27/EncriptadorTexto/blob/main/assets/img/mobile.png" height="300">
